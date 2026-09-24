@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="waves-lanes-game"
+run/main_scene="uid://bpqr1k2hk41pf"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameState="*uid://bu0xen3246dm3"
 
 [display]
 
