@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bb8204o1pqltb"]
+
+[ext_resource type="Script" uid="uid://dvtlsu0dewc0k" path="res://hq.gd" id="1_y5vmi"]
+
+[node name="Hq" type="Node2D" unique_id=1797841222]
+script = ExtResource("1_y5vmi")
+
+[node name="Body" type="Polygon2D" parent="." unique_id=479694603]
+polygon = PackedVector2Array(0, 0, 60, 0, 60, 60, 0, 60)

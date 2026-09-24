@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c84r1qni21ae5"]
+
+[ext_resource type="PackedScene" uid="uid://bb8204o1pqltb" path="res://hq.tscn" id="1_phwy2"]
+
+[node name="Lane" type="Node2D" unique_id=592448107]
+
+[node name="Ground" type="Polygon2D" parent="." unique_id=419301429]
+color = Color(0.9894075, 0.907665, 0.7811005, 1)
+polygon = PackedVector2Array(0, 0, 1000, 0, 1000, 100, 0, 100)
+
+[node name="PlayerHq" parent="." unique_id=1797841222 instance=ExtResource("1_phwy2")]
+position = Vector2(20, 20)
+color = Color(0.30052412, 0.64559305, 0.7978466, 1)
+
+[node name="EnemyHq" parent="." unique_id=1650295252 instance=ExtResource("1_phwy2")]
+position = Vector2(920, 20)
+color = Color(0.94192916, 0.39823213, 0.42940444, 1)
+
+[node name="PlayerSpawn" type="Marker2D" parent="." unique_id=1265885576]
+position = Vector2(90, 50)
+
+[node name="EnemySpawn" type="Marker2D" parent="." unique_id=114988821]
+position = Vector2(910, 50)

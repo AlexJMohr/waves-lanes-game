@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpqr1k2hk41pf"]
 
 [ext_resource type="Script" uid="uid://blniwi0vm2asg" path="res://ui.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://c84r1qni21ae5" path="res://lane.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Node2D" unique_id=1519522500]
 
@@ -10,3 +11,6 @@ script = ExtResource("1_ig7tw")
 [node name="MoneyLabel" type="Label" parent="UI" unique_id=482080610]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="Lane" parent="." unique_id=592448107 instance=ExtResource("2_0xm2m")]
+position = Vector2(104, 277)
