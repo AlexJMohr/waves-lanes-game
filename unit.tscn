@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://tuget0rdykhb"]
+
+[ext_resource type="Script" uid="uid://d1j4y21ail5x" path="res://unit.gd" id="1_btf8p"]
+[ext_resource type="PackedScene" uid="uid://c34u5m4tg75tw" path="res://health_bar.tscn" id="2_ctwoc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_htucp"]
+
+[node name="Unit" type="CharacterBody2D" unique_id=213089700]
+script = ExtResource("1_btf8p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=370429225]
+shape = SubResource("CircleShape2D_htucp")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1846150858]
+polygon = PackedVector2Array(0, -10, -5, -9, -9, -5, -10, 0, -9, 5, -5, 9, 0, 10, 5, 9, 9, 5, 10, 0, 9, -5, 5, -9)
+
+[node name="HealthBar" parent="." unique_id=78408662 instance=ExtResource("2_ctwoc")]
+width = 40
+height = 8
+y_offset = -25
