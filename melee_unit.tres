@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="UnitData" format=3 uid="uid://by2qa06f0uuvm"]
+
+[ext_resource type="PackedScene" uid="uid://tuget0rdykhb" path="res://unit.tscn" id="1_4bwkx"]
+[ext_resource type="Script" uid="uid://c5nchxsmmrq3l" path="res://unit_data.gd" id="1_pfd6c"]
+
+[resource]
+script = ExtResource("1_pfd6c")
+display_name = "Melee"
+scene = ExtResource("1_4bwkx")
