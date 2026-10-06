@@ -6,6 +6,8 @@ var money: int = 0
 var tick_interval: float = 1.0
 var income_per_tick: int = 1
 
+const KILL_REWARD_FRACTION := 0.5
+
 
 func _ready() -> void:
 	print_debug("GameState autoloaded")
@@ -17,5 +19,17 @@ func _ready() -> void:
 
 
 func _on_income_tick() -> void:
-	money += income_per_tick
+	add_money(income_per_tick)
+
+
+func add_money(amount: int):
+	money += amount
 	money_changed.emit(money)
+
+
+func spend(amount: int) -> bool:
+	if money < amount:
+		return false
+	money -= amount
+	money_changed.emit(money)
+	return true

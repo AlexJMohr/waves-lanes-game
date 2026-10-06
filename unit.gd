@@ -68,4 +68,6 @@ func take_damage(amount: int):
 	health -= amount
 	$HealthBar.health = health
 	if health <= 0:
+		if team == Team.ENEMY:
+			GameState.add_money(int(cost * GameState.KILL_REWARD_FRACTION))
 		queue_free()
