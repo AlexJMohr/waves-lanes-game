@@ -17,11 +17,16 @@ enum Team {
 var health: int = max_health
 var attack_accumulator: float = attack_cooldown
 
+const PLAYER_LAYER := 1
+const ENEMY_LAYER := 2
+
 
 func _ready() -> void:
 	add_to_group("player_units" if team == Team.PLAYER else "enemy_units")
 	$HealthBar.max_health = max_health
 	$HealthBar.health = health
+	collision_layer = PLAYER_LAYER if team == Team.PLAYER else ENEMY_LAYER
+	collision_mask = PLAYER_LAYER | ENEMY_LAYER
 
 
 func _physics_process(delta: float) -> void:
@@ -31,12 +36,16 @@ func _physics_process(delta: float) -> void:
 	if enemy != null and global_position.distance_to(enemy.global_position) < attack_range:
 		velocity = Vector2.ZERO
 		if attack_accumulator >= attack_cooldown:
-			enemy.take_damage(damage)
+			_attack(enemy)
 			attack_accumulator = 0
 	else:
 		var direction := 1 if team == Team.PLAYER else -1
 		velocity = Vector2(direction * speed, 0)
 	move_and_slide()
+
+
+func _attack(enemy: Unit) -> void:
+	enemy.take_damage(damage)
 
 
 func _get_nearest_enemy() -> Unit:
