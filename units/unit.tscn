@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://tuget0rdykhb"]
 
-[ext_resource type="Script" uid="uid://d1j4y21ail5x" path="res://unit.gd" id="1_btf8p"]
-[ext_resource type="PackedScene" uid="uid://c34u5m4tg75tw" path="res://health_bar.tscn" id="2_ctwoc"]
+[ext_resource type="Script" uid="uid://d1j4y21ail5x" path="res://units/unit.gd" id="1_btf8p"]
+[ext_resource type="PackedScene" uid="uid://c34u5m4tg75tw" path="res://ui/health_bar.tscn" id="2_ctwoc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_htucp"]
 
@@ -18,3 +18,8 @@ polygon = PackedVector2Array(0, -10, -5, -9, -9, -5, -10, 0, -9, 5, -5, 9, 0, 10
 width = 40
 height = 8
 y_offset = -25
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1134082804]
+avoidance_enabled = true
+radius = 12.0
+neighbor_distance = 40.0

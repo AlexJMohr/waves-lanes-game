@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bb8204o1pqltb"]
 
-[ext_resource type="Script" uid="uid://dvtlsu0dewc0k" path="res://hq.gd" id="1_y5vmi"]
-[ext_resource type="PackedScene" uid="uid://c34u5m4tg75tw" path="res://health_bar.tscn" id="2_7tt6b"]
+[ext_resource type="Script" uid="uid://dvtlsu0dewc0k" path="res://lane/hq.gd" id="1_y5vmi"]
+[ext_resource type="PackedScene" uid="uid://c34u5m4tg75tw" path="res://ui/health_bar.tscn" id="2_7tt6b"]
 
 [node name="Hq" type="Node2D" unique_id=1797841222]
 script = ExtResource("1_y5vmi")

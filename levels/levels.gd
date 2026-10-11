@@ -1,7 +1,7 @@
 class_name Levels
 
-const MELEE = preload("res://melee_unit.tres")
-const RANGED = preload("res://ranged_unit.tres")
+const MELEE = preload("res://units/melee_unit.tres")
+const RANGED = preload("res://units/ranged_unit.tres")
 
 # array of levels, each item is array of waves
 const LEVELS = [

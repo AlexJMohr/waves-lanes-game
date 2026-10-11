@@ -6,8 +6,8 @@ signal buy_requested(data: UnitData)
 @onready var melee_button: Button = $MeleeButton
 @onready var ranged_button: Button = $RangedButton
 
-const MELEE_DATA := preload("res://melee_unit.tres")
-const RANGED_DATA := preload("res://ranged_unit.tres")
+const MELEE_DATA := preload("res://units/melee_unit.tres")
+const RANGED_DATA := preload("res://units/ranged_unit.tres")
 
 
 func _ready() -> void:

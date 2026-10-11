@@ -1,6 +1,6 @@
 extends Unit
 
-const PROJECTILE_SCENE := preload("res://projectile.tscn")
+const PROJECTILE_SCENE := preload("res://units/projectile.tscn")
 
 
 func _attack(_enemy: Unit) -> void:
